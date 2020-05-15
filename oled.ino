@@ -1,10 +1,3 @@
-/* Starting with Arduino OLED coding
- *  for " arduino oled i2c tutorial : 0.96" 128 X 32 for beginners"
- *  subscribe for more arduino Tuorials and Projects
-https://www.youtube.com/channel/UCM6rbuieQBBLFsxszWA85AQ?sub_confirmation=1
- */
-// 5 min timer for UVC & 30 Sec for mist
-
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -36,9 +29,9 @@ void loop()
   display.display();
 long timeNow = millis();
  
-int days = timeNow / day ;                                //number of days
-int hours = (timeNow % day) / hour;                       //the remainder from days division (in milliseconds) divided by hours, this gives the full hours
-int minutes = ((timeNow % day) % hour) / minute ;         //and so on...
+int days = timeNow / day ;                                
+int hours = (timeNow % day) / hour;                       
+int minutes = ((timeNow % day) % hour) / minute ;         
 int seconds = (((timeNow % day) % hour) % minute) / second;
 
     display.setTextSize(1);
